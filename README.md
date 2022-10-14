@@ -1,2 +1,3 @@
-# sample-workhttps://khalilstemmler.com/blogs/typescript/node-starter-project/
-if you want to add linting you can do it from here: https://khalilstemmler.com/blogs/typescript/eslint-for-typescript/
+# Typescript work
+<hr>
+## The folders contain requirements.txt in which the requirements are written and code implementation is present in the solution folder  
