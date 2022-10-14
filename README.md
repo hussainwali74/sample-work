@@ -1,3 +1,3 @@
-# Typescript work
+# Cash Register challenge
 <hr>
-## The folders contain requirements.txt in which the requirements are written and code implementation is present in the solution folder  
+<span>This is the last challenge in the freecodecamp javascript datastructures and algorithms certification</span>
