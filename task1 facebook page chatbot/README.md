@@ -1,5 +1,7 @@
-# sample-work
+# task 1: facebook chat bot
 
-## Typescript sample work is in  typescript branch
-## Python sample work is in  python branch
-## Machine Learning sample work is in  ml branch
+## run npm i after cloning the repo
+### scripts 
+ -   npm run dev
+ -   npm run start
+ -   npm run build
