@@ -1,5 +1,4 @@
-# sample-work
-
-## Typescript sample work is in  typescript branch
-## Python sample work is in  python branch
-## Machine Learning sample work is in  ml branch
+# submission for respond.io coding assesment 
+## The tasks are divided in two folders
+### Task 1: Facebook Messenger Bot 
+### Task 2: Clean and Sort the transactions 
