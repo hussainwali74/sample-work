@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
 
-    "build": "install && rimraf ./build && tsc",
+    "build": "rimraf ./build && tsc",
     "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec\"",
     "start": "npm run build && node build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
