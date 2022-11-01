@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "rimraf": "./node_modules/rimraf/bin.js",
     "build": "rimraf ./build && tsc",
     "dev": "concurrently \"nodemon\" \"nodemon -x tsoa spec\"",
     "start": "npm run build && node build/index.js",
