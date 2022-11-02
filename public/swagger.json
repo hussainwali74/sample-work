@@ -6,7 +6,7 @@
 		"requestBodies": {},
 		"responses": {},
 		"schemas": {
-			"MessangerResponse": {
+			"ProductResponse": {
 				"properties": {
 					"message": {
 						"type": "string"
@@ -33,16 +33,31 @@
 	},
 	"openapi": "3.0.0",
 	"paths": {
-		"/messanger/query": {
+		"/messanger/webhook": {
+			"post": {
+				"operationId": "HandlePostWebhook",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			},
 			"get": {
-				"operationId": "GetMessage",
+				"operationId": "HandleGetWebhook",
 				"responses": {
 					"200": {
 						"description": "Ok",
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/MessangerResponse"
+									"type": "string"
 								}
 							}
 						}
@@ -52,7 +67,26 @@
 				"parameters": []
 			}
 		},
-		"/messanger/desc/{product_id}": {
+		"/product/query": {
+			"get": {
+				"operationId": "GetMessage",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ProductResponse"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			}
+		},
+		"/product/desc/{product_id}": {
 			"get": {
 				"operationId": "GetMessages",
 				"responses": {
@@ -61,7 +95,7 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/MessangerResponse"
+									"$ref": "#/components/schemas/ProductResponse"
 								}
 							}
 						}
@@ -81,7 +115,7 @@
 				]
 			}
 		},
-		"/messanger/price/{product_id}": {
+		"/product/price/{product_id}": {
 			"get": {
 				"operationId": "GetMessages1",
 				"responses": {
@@ -90,7 +124,7 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/MessangerResponse"
+									"$ref": "#/components/schemas/ProductResponse"
 								}
 							}
 						}
@@ -110,7 +144,7 @@
 				]
 			}
 		},
-		"/messanger/shipping/{product_id}": {
+		"/product/shipping/{product_id}": {
 			"get": {
 				"operationId": "GetMessages2",
 				"responses": {
@@ -119,7 +153,7 @@
 						"content": {
 							"application/json": {
 								"schema": {
-									"$ref": "#/components/schemas/MessangerResponse"
+									"$ref": "#/components/schemas/ProductResponse"
 								}
 							}
 						}
