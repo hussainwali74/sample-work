@@ -1,4 +1,15 @@
+import Utils from "./utils.service";
+
 const request = require('request')
+
+const greeting_replies:string[] = [
+  'How are you?',
+  'I hope you\'re doing well.',
+  'I hope you\'re having a great day.'
+]
+const endpoints:string[] = ['desc','price','shipping']
+
+const greetings:string[]=['Hi', 'Hello', 'Good morning']
 
 // Handles messaging_postbacks events
 export function handlePostback(senderPsid: any, receivedPostback: any) {
@@ -22,12 +33,25 @@ export function handleMessage(senderPsid: any, receivedMessage: any) {
   let response;
 
   // Checks if the message contains text
-  if (receivedMessage.text) {
-    // Create the payload for a basic text message, which
-    // will be added to the body of your request to the Send API
-    response = {
-      text: `hussain You sent the message: '${receivedMessage.text}'. Now send me an attachment hussain!`,
-    };
+  const message_text:string = receivedMessage?.text
+  if (message_text) {
+    // handle greeting
+    if(greetings.some(greeting=>message_text.includes(greeting))){
+      const reply:string = Utils.getRandomFromList(greeting_replies)
+      response = { text: reply}
+    } else{      
+      // Create the payload for message
+      response = {
+        text: `hussain You sent the message: '${message_text}'. Now send me an attachment hussain!`,
+      };
+      //handle other queries
+      const endpoint = endpoints.find(endpoint=>message_text.includes(endpoint)) 
+      if(endpoint){
+        const product_id = message_text.split(' ')[1] //assuming user will always put a space between query and product id
+        response = {text:product_id}
+      }
+    }
+
   } else if (receivedMessage.attachments) {
     // Get the URL of the message attachment
     let attachmentUrl = receivedMessage.attachments[0].payload.url;

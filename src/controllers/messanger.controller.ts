@@ -2,10 +2,6 @@ import express from "express";
 import { Controller, Get, Path, Post, Request, Route } from "tsoa";
 import { handleMessage, handlePostback } from "../services/fb.service";
 
-interface MessangerResponse {
-  message: string;
-}
-
 @Route("messanger")
 export default class MessangerController extends Controller {
   constructor(){
@@ -18,9 +14,6 @@ export default class MessangerController extends Controller {
     let body = req.body;
 
     console.log(`\u{1F7EA} Received webhook:`);
-
-    console.dir(body, { depth: null });
-    console.log("body.object", body.object);
 
     if (body.object === "page") {
       // Iterates over each entry - there may be multiple if batched
