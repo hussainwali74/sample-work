@@ -2,16 +2,16 @@ import myDataSource from "../app-data-source";
 import { Product } from "../entity/product.entity";
 import Utils from "./utils.service";
 
-const request = require('request')
+const request = require("request");
 
-const greeting_replies:string[] = [
-  'How are you?',
-  'I hope you\'re doing well.',
-  'I hope you\'re having a great day.'
-]
-const endpoints:string[] = ['desc','price','shipping']
+const greeting_replies: string[] = [
+  "How are you?",
+  "I hope you're doing well.",
+  "I hope you're having a great day.",
+];
+const endpoints: string[] = ["desc", "price", "shipping"];
 
-const greetings:string[]=['Hi', 'Hello', 'Good morning']
+const greetings: string[] = ["Hi", "Hello", "Good morning"];
 
 // Handles messaging_postbacks events
 export function handlePostback(senderPsid: any, receivedPostback: any) {
@@ -35,38 +35,45 @@ export async function handleMessage(senderPsid: any, receivedMessage: any) {
   let response;
 
   // Checks if the message contains text
-  const message_text:string = receivedMessage?.text
+  const message_text: string = receivedMessage?.text;
   if (message_text) {
     // handle greeting
-    if(greetings.some(greeting=>message_text.includes(greeting))){
-      const reply:string = Utils.getRandomFromList(greeting_replies)
-      response = { text: reply}
-    } else{      
+    if (greetings.some((greeting) => message_text.includes(greeting))) {
+      const reply: string = Utils.getRandomFromList(greeting_replies);
+      response = { text: reply };
+    } else {
       // Create the payload for message
       response = {
         text: `I am simple bot with a simple brain, I don't understand your query please wait for the page owner to talk to you.`,
       };
       //handle other queries
-      const endpoint = endpoints.find(endpoint=>message_text.includes(endpoint)) 
-      if(endpoint){
-        const product_id = message_text.split(endpoint)[1] //assuming user will always put a space between query and product id
-        if(product_id){
-          let data = await Utils.getProductDetailsByid(+product_id)
-          response =  {text:JSON.stringify(data[endpoint])}
+      const endpoint = endpoints.find((endpoint) =>
+        message_text.includes(endpoint)
+      );
+      if (endpoint) {
+        const product_id = message_text.split(endpoint)[1]; //assuming user will always put a space between query and product id
+        if (product_id) {
+          let data = await Utils.getProductDetailsByid(+product_id);
+          response = { text: JSON.stringify(data[endpoint]) };
         }
       }
-      if(message_text.includes('buy')){
-        const product_id = message_text.split('buy')[1]
-        if(product_id){
-          let data = await Utils.getProductDetailsByid(+product_id)
+      if (message_text.includes("buy")) {
+        const product_id = message_text.split("buy")[1];
+        if (product_id) {
+          let data = await Utils.getProductDetailsByid(+product_id);
           // send email
-          Utils.sendMail(data)
+          response = {
+            text: JSON.stringify({
+              price: data["price"],
+              desc: data["desc"],
+              shipping: data["shipping"],
+            }),
+          };
+          Utils.sendMail(data);
         }
       }
     }
-
   } else if (receivedMessage.attachments) {
-
     // Get the URL of the message attachment
     let attachmentUrl = receivedMessage.attachments[0].payload.url;
     response = {
@@ -116,16 +123,19 @@ export function callSendAPI(senderPsid: any, response: any) {
   };
 
   // Send the HTTP request to the Messenger Platform
-  request({
-    'uri': 'https://graph.facebook.com/v2.6/me/messages',
-    'qs': { 'access_token': PAGE_ACCESS_TOKEN },
-    'method': 'POST',
-    'json': requestBody
-  }, (err:any, _res:any, _body:any) => {
-    if (!err) {
-      console.log('Message sent!');
-    } else {
-      console.error('Unable to send message:' + err);
+  request(
+    {
+      uri: "https://graph.facebook.com/v2.6/me/messages",
+      qs: { access_token: PAGE_ACCESS_TOKEN },
+      method: "POST",
+      json: requestBody,
+    },
+    (err: any, _res: any, _body: any) => {
+      if (!err) {
+        console.log("Message sent!");
+      } else {
+        console.error("Unable to send message:" + err);
+      }
     }
-  });
+  );
 }

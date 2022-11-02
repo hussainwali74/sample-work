@@ -20,5 +20,7 @@ ngrok was listed as a suggestion for locally development but Facebook did not al
 after data seeding is complete you may test the app by chatting with the facebook page:
 > facebook page: `https://www.facebook.com/profile.php?id=100087197868813`  
 
+sendgrid is integrated successfully on personal email if required can give a demo with personal email
+
 <hr>
 ### Task 2: Clean and Sort the transactions 
