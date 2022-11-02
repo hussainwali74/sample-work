@@ -25,9 +25,7 @@ const x =myDataSource
   .catch((err) => {
     console.error(`Data Source initialization error`, );
     console.log('')
-
     console.log('--------------------------------------------------')
-
   });
 
 export default myDataSource;
