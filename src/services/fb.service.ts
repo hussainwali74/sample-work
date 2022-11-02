@@ -1,5 +1,3 @@
-import myDataSource from "../app-data-source";
-import { Product } from "../entity/product.entity";
 import Utils from "./utils.service";
 
 const request = require("request");

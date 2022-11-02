@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "51fb84a6-4ebd-4660-b683-bf60147ae80c",
+		"name": "respondio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ngrok",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/messanger/webhook?hub.mode=subscribe&hub.verify_token=respondiotoken&hub.challenge=1158201444",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"messanger",
+						"webhook"
+					],
+					"query": [
+						{
+							"key": "hub.mode",
+							"value": "subscribe"
+						},
+						{
+							"key": "hub.verify_token",
+							"value": "respondiotoken"
+						},
+						{
+							"key": "hub.challenge",
+							"value": "1158201444"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/product/get_products/48530",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"product",
+						"get_products",
+						"48530"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/messanger/webhook?hub.mode=subscribe&hub.verify_token=respondiotoken&hub.challenge=1158201444 Copy 2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/messanger/webhook?hub.mode=subscribe&hub.verify_token=respondiotoken&hub.challenge=1158201444",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"messanger",
+						"webhook"
+					],
+					"query": [
+						{
+							"key": "hub.mode",
+							"value": "subscribe"
+						},
+						{
+							"key": "hub.verify_token",
+							"value": "respondiotoken"
+						},
+						{
+							"key": "hub.challenge",
+							"value": "1158201444"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post req",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/messanger/webhook?hub.mode=subscribe&hub.verify_token=respondiotoken&hub.challenge=1158201444",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"messanger",
+						"webhook"
+					],
+					"query": [
+						{
+							"key": "hub.mode",
+							"value": "subscribe"
+						},
+						{
+							"key": "hub.verify_token",
+							"value": "respondiotoken"
+						},
+						{
+							"key": "hub.challenge",
+							"value": "1158201444"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

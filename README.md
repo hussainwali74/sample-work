@@ -1,6 +1,4 @@
-# submission for respond.io coding assesment 
 
-## The tasks are divided in two folders
 <hr>
 ### Task 1: Facebook Messenger Bot 
 #### task 1: facebook chat bot
@@ -18,9 +16,23 @@ ngrok was listed as a suggestion for locally development but Facebook did not al
 
 ##### uncomment index.ts line 14 `await seedData(myDataSource)` to seed the data to your own db
 after data seeding is complete you may test the app by chatting with the facebook page:
-> facebook page: `https://www.facebook.com/profile.php?id=100087197868813`  
+> facebook page: `https://www.facebook.com/profile.php?id
+`  
 
 sendgrid is integrated successfully on personal email if required can give a demo with personal email
 
+create a .env with the following keys and your own values:
+- PORT
+- DB_TYPE
+- DB_PORT
+- DB_USERNAME
+- DB_PASSWORD
+- DB_NAME
+- PAGE_ACCESS_TOKEN
+- verifyToken
+- FACEBOOK_PAGE_ID
+- FACEBOOK_APP_ID
+- FACEBOOK_APP_SECRET
+- SENDGRID_API_KEY
 <hr>
-### Task 2: Clean and Sort the transactions 
+postman collection with local api testing is available in project root folder: `respondio.postman_collection.json`

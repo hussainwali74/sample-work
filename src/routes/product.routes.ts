@@ -1,13 +1,5 @@
 import express, { Request, Response } from "express";
-import MessangerController from "../controllers/messanger.controller";
 import { cleanParam } from "../middlewares/param.middleware";
-import { createHmac } from "node:crypto";
-import {
-  callSendAPI,
-  handleMessage,
-  handlePostback,
-} from "../services/fb.service";
-import ProductController from "../controllers/product.controller";
 import myDataSource from "../app-data-source";
 import { Product } from "../entity/product.entity";
 import Utils from "../services/utils.service";

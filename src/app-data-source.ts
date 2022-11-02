@@ -2,7 +2,6 @@ import { DataSource } from "typeorm";
 
 // Using environment variables
 import dotenv from "dotenv";
-import Utils from "./services/utils.service";
 dotenv.config();
 
 const myDataSource = new DataSource({

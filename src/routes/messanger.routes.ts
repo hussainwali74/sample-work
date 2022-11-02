@@ -1,6 +1,5 @@
 import express, { Request, Response } from "express";
 import MessangerController from "../controllers/messanger.controller";
-import { handleMessage, handlePostback } from "../services/fb.service";
 const controller = new MessangerController();
 require("dotenv").config();
 
