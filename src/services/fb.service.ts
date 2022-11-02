@@ -1,3 +1,5 @@
+const request = require('request')
+
 // Handles messaging_postbacks events
 export function handlePostback(senderPsid: any, receivedPostback: any) {
   let response;
@@ -24,7 +26,7 @@ export function handleMessage(senderPsid: any, receivedMessage: any) {
     // Create the payload for a basic text message, which
     // will be added to the body of your request to the Send API
     response = {
-      text: `You sent the message: '${receivedMessage.text}'. Now send me an attachment!`,
+      text: `hussain You sent the message: '${receivedMessage.text}'. Now send me an attachment hussain!`,
     };
   } else if (receivedMessage.attachments) {
     // Get the URL of the message attachment
@@ -76,16 +78,16 @@ export function callSendAPI(senderPsid: any, response: any) {
   };
 
   // Send the HTTP request to the Messenger Platform
-  // request({
-  //   'uri': 'https://graph.facebook.com/v2.6/me/messages',
-  //   'qs': { 'access_token': PAGE_ACCESS_TOKEN },
-  //   'method': 'POST',
-  //   'json': requestBody
-  // }, (err, _res, _body) => {
-  //   if (!err) {
-  //     console.log('Message sent!');
-  //   } else {
-  //     console.error('Unable to send message:' + err);
-  //   }
-  // });
+  request({
+    'uri': 'https://graph.facebook.com/v2.6/me/messages',
+    'qs': { 'access_token': PAGE_ACCESS_TOKEN },
+    'method': 'POST',
+    'json': requestBody
+  }, (err:any, _res:any, _body:any) => {
+    if (!err) {
+      console.log('Message sent!');
+    } else {
+      console.error('Unable to send message:' + err);
+    }
+  });
 }
