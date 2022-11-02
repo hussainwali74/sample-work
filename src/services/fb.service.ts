@@ -51,14 +51,23 @@ export async function handleMessage(senderPsid: any, receivedMessage: any) {
       if(endpoint){
         const product_id = message_text.split(' ')[1] //assuming user will always put a space between query and product id
         if(product_id){
-          const repo = myDataSource.manager.getRepository(Product)
-          const data = await repo.findOneBy({sku:+product_id})
-          response = {text:JSON.stringify(data)}
+          let data;
+          if (myDataSource.isInitialized) {
+            data = await myDataSource.manager.getRepository(Product).findOneBy({ sku: +product_id });
+          }else{
+            data = Utils.getJsonData()
+            data = data.find(
+              (x: any) => x.sku == +product_id
+              );
+            }
+          let ind:string = message_text.split(' ')[0]
+          response = {text:JSON.stringify(data[ind])}
         }
       }
     }
 
   } else if (receivedMessage.attachments) {
+
     // Get the URL of the message attachment
     let attachmentUrl = receivedMessage.attachments[0].payload.url;
     response = {

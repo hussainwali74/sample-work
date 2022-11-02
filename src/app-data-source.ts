@@ -2,6 +2,7 @@ import { DataSource } from "typeorm";
 
 // Using environment variables
 import dotenv from "dotenv";
+import Utils from "./services/utils.service";
 dotenv.config();
 
 const myDataSource = new DataSource({
@@ -17,13 +18,17 @@ const myDataSource = new DataSource({
   // logging: true,
 });
 
-myDataSource
+const x =myDataSource
   .initialize()
   .then(() => {
     console.log(`Data Source has been initialized`);
   })
   .catch((err) => {
-    console.error(`Data Source initialization error`, err);
+    console.error(`Data Source initialization error`, );
+    console.log('')
+    console.log('')
+    console.log('--------------------------------------------------')
+
   });
 
 export default myDataSource;
