@@ -16,8 +16,7 @@ ngrok was listed as a suggestion for locally development but Facebook did not al
 
 ##### uncomment index.ts line 14 `await seedData(myDataSource)` to seed the data to your own db
 after data seeding is complete you may test the app by chatting with the facebook page:
-> facebook page: `https://www.facebook.com/profile.php?id
-`  
+> facebook page: `https://www.facebook.com/profile.php?id=100087197868813`  
 
 sendgrid is integrated successfully on personal email if required can give a demo with personal email
 
