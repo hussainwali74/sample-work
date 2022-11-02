@@ -4,9 +4,6 @@ import { handleMessage, handlePostback } from "../services/fb.service";
 
 @Route("messanger")
 export default class MessangerController extends Controller {
-  constructor(){
-    super()
-  }
 
   @Post("webhook")
   public async handlePostWebhook(@Request() req: express.Request):Promise<any> {

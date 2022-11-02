@@ -1,3 +1,5 @@
+import myDataSource from "../app-data-source";
+import { Product } from "../entity/product.entity";
 import Utils from "./utils.service";
 
 const request = require('request')
@@ -29,7 +31,7 @@ export function handlePostback(senderPsid: any, receivedPostback: any) {
 }
 
 // Handles messages events
-export function handleMessage(senderPsid: any, receivedMessage: any) {
+export async function handleMessage(senderPsid: any, receivedMessage: any) {
   let response;
 
   // Checks if the message contains text
@@ -42,13 +44,17 @@ export function handleMessage(senderPsid: any, receivedMessage: any) {
     } else{      
       // Create the payload for message
       response = {
-        text: `hussain You sent the message: '${message_text}'. Now send me an attachment hussain!`,
+        text: `I am simple bot with a simple brain, I don't understand your query please wait for the page owner to talk to you.`,
       };
       //handle other queries
       const endpoint = endpoints.find(endpoint=>message_text.includes(endpoint)) 
       if(endpoint){
         const product_id = message_text.split(' ')[1] //assuming user will always put a space between query and product id
-        response = {text:product_id}
+        if(product_id){
+          const repo = myDataSource.manager.getRepository(Product)
+          const data = await repo.findOneBy({sku:+product_id})
+          response = {text:JSON.stringify(data)}
+        }
       }
     }
 

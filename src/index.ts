@@ -1,6 +1,5 @@
-import express, { Express, Request, Response } from "express";
+import express, { Express } from "express";
 import dotenv from "dotenv";
-import { User } from "./entity/User.entity";
 import morgan from "morgan";
 import router from "./routes/routes";
 import swaggerUi from "swagger-ui-express";
