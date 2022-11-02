@@ -6,6 +6,7 @@ import swaggerUi from "swagger-ui-express";
 import { seedData } from "./seeder";
 import myDataSource from "./app-data-source";
 import { DataSource } from "typeorm";
+import Utils from "./services/utils.service";
 
 /**
  * uncomment the below IIFE to seed db to local db 

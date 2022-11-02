@@ -14,6 +14,8 @@ ngrok was listed as a suggestion for locally development but Facebook did not al
  -   npm run start
  -   npm run build
 
+##### uncomment index.ts line 14 `await seedData(myDataSource)` to seed the data to your own db (in seeder.ts line 19: uncomment lines to save data to local json file which can be used if database is not available) saves data in myjsonfile.json
+
 ##### uncomment index.ts line 14 `await seedData(myDataSource)` to seed the data to your own db
 after data seeding is complete you may test the app by chatting with the facebook page:
 > facebook page: `https://www.facebook.com/profile.php?id=100087197868813`  

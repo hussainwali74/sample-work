@@ -49,19 +49,18 @@ export async function handleMessage(senderPsid: any, receivedMessage: any) {
       //handle other queries
       const endpoint = endpoints.find(endpoint=>message_text.includes(endpoint)) 
       if(endpoint){
-        const product_id = message_text.split(' ')[1] //assuming user will always put a space between query and product id
+        const product_id = message_text.split(endpoint)[1] //assuming user will always put a space between query and product id
         if(product_id){
-          let data;
-          if (myDataSource.isInitialized) {
-            data = await myDataSource.manager.getRepository(Product).findOneBy({ sku: +product_id });
-          }else{
-            data = Utils.getJsonData()
-            data = data.find(
-              (x: any) => x.sku == +product_id
-              );
-            }
-          let ind:string = message_text.split(' ')[0]
-          response = {text:JSON.stringify(data[ind])}
+          let data = await Utils.getProductDetailsByid(+product_id)
+          response =  {text:JSON.stringify(data[endpoint])}
+        }
+      }
+      if(message_text.includes('buy')){
+        const product_id = message_text.split('buy')[1]
+        if(product_id){
+          let data = await Utils.getProductDetailsByid(+product_id)
+          // send email
+          Utils.sendMail(data)
         }
       }
     }
