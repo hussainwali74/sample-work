@@ -45,6 +45,7 @@ postman collection with local api testing is available in project root folder: `
 <hr>
 ### OpenAPI documentation with SwaggerUI :
 > link: `https://respond-io-chat.herokuapp.com/docs/`
+<br>
 
 ![image](https://user-images.githubusercontent.com/24194686/199648698-3a53b975-508f-48cb-b7fc-b922e048373e.png)
 
