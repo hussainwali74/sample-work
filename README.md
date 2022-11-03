@@ -43,9 +43,9 @@ create a .env with the following keys and your own values:
 <hr>
 postman collection with local api testing is available in project root folder: `respondio.postman_collection.json`
 <hr>
-> docs link <strong><a href="https://respond-io-chat.herokuapp.com/docs/">OpenAPI documentation with SwaggerUI</a></strong>
+> docs link <strong> <a href="https://respond-io-chat.herokuapp.com/docs/">OpenAPI documentation with SwaggerUI </a> </strong>
 
-<br>
-<br>
-![image](https://user-images.githubusercontent.com/24194686/199648698-3a53b975-508f-48cb-b7fc-b922e048373e.png)
+<br/>
+<br/>
+![image](https://user-images.githubusercontent.com/24194686/199650123-bd7b1aaa-ebb5-41b0-b463-c2628b7fdef1.png)
 
