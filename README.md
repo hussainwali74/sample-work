@@ -18,11 +18,7 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
+
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -31,7 +27,8 @@
 <br />
 <div align="center">
   <a href="https://github.com/hussainwali74/sample-work/tree/duplicate_transactions_finder">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="https://nodejs.org/static/images/logo.svg" alt="Logo" width="80" height="80">
+    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--LkL103Qa--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/377/landscape/typescriptlang.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Clean and Sort the Transactions </h3>
@@ -41,24 +38,15 @@
     <p>
         Sometimes when a customer is charged, there is a duplicate transaction created.
         We need to find those transactions so that they can be dealt with.
-
         Everything about the transaction should be identical, except the transaction id and the time at
         which it occurred, as there can be up to a minute delay.
     </p>
-
     <strong> Example </strong>
-
-Find all transactions that have the same sourceAccount, targetAccount, category, amount,
-and the time difference between each consecutive transaction is less than 1 minute.
+    <p>
+        Find all transactions that have the same sourceAccount, targetAccount, category, amount,
+        and the time difference between each consecutive transaction is less than 1 minute.
+    </p>
     <br />
-    <a href="https://github.com/hussainwali74/sample-work/tree/duplicate_transactions_finder"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/hussainwali74/sample-work/tree/duplicate_transactions_finder">View Demo</a>
-    ·
-    <a href="https://github.com/hussainwali74/sample-work/tree/duplicate_transactions_finder/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/hussainwali74/sample-work/tree/duplicate_transactions_finder/issues">Request Feature</a>
   </p>
 </div>
 
@@ -78,15 +66,10 @@ and the time difference between each consecutive transaction is less than 1 minu
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#installation">Installation and Usage</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
@@ -97,7 +80,9 @@ and the time difference between each consecutive transaction is less than 1 minu
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+simple application to find duplicate transactions. The example input and source code is present in src/index.ts.
+
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -126,7 +111,7 @@ This is an example of how to list things you need to use the software and how to
   npm install npm@latest -g
   ```
 
-### Installation
+### Installation and Usage
 
 1. Clone the repo
    ```sh
@@ -136,30 +121,11 @@ This is an example of how to list things you need to use the software and how to
    ```sh
    npm install
    ```
+3. Run the project 
+    ```sh
+    npm run dev
+    ```
 3. Check Results on the console
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-The example input and source code is present in src/index.ts. 
-
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -168,10 +134,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
+Hussain Wali - [@linkedin](https://www.linkedin.com/in/hussain-wali-780294b6) - hussainwali743@gmail.com
 
 Project Link: [https://github.com/hussainwali74/sample-work/tree/duplicate_transactions_finder](https://github.com/hussainwali74/sample-work/tree/duplicate_transactions_finder)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
