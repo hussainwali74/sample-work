@@ -90,9 +90,9 @@ simple application to find duplicate transactions. The example input and source 
 
 ### Built With
 
-* [![TypeScript][typescriptlang.org]][TypeScript-url]
-* [![NodeJS][nodejs.org]][NodeJS-url]
-* [![nodemon][nodemon.io]][nodemon-url]
+* [![TypeScript]][TypeScript-url]
+* [![NodeJS]][NodeJS-url]
+* [![nodemon]][nodemon-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -134,9 +134,10 @@ This is an example of how to list things you need to use the software and how to
 <!-- CONTACT -->
 ## Contact
 
-Hussain Wali - [@linkedin](https://www.linkedin.com/in/hussain-wali-780294b6) - hussainwali743@gmail.com
-
-Project Link: [https://github.com/hussainwali74/sample-work/tree/duplicate_transactions_finder](https://github.com/hussainwali74/sample-work/tree/duplicate_transactions_finder)
+Hussain Wali  
+  - [Linkedin](https://www.linkedin.com/in/hussain-wali-780294b6)
+  - [Email](hussainwali743@gmail.com)
+Project Link: [Duplicate Transaction Finder](https://github.com/hussainwali74/sample-work/tree/duplicate_transactions_finder)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
