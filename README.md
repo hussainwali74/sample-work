@@ -28,7 +28,7 @@
 <div align="center">
   <a href="https://github.com/hussainwali74/sample-work/tree/duplicate_transactions_finder">
     <img src="https://nodejs.org/static/images/logo.svg" alt="Logo" width="80" height="80">
-    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--LkL103Qa--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/377/landscape/typescriptlang.png" alt="Logo" width="80" height="40" style="padding-bottom:20px">
+    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--LkL103Qa--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/377/landscape/typescriptlang.png" alt="Logo" width="80" height="40" style="padding-bottom:20px; padding-bottom: 20px;" >
   </a>
 
 <h3 align="center">Clean and Sort the Transactions </h3>
@@ -78,10 +78,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
 simple application to find duplicate transactions. The example input and source code is present in src/index.ts.
-
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -90,9 +87,9 @@ simple application to find duplicate transactions. The example input and source 
 
 ### Built With
 
-* [![TypeScript]][TypeScript-url]
-* [![NodeJS]][NodeJS-url]
-* [![nodemon]][nodemon-url]
+* [TypeScript][TypeScript-url]
+* [NodeJS][NodeJS-url]
+* [nodemon][nodemon-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -137,7 +134,7 @@ This is an example of how to list things you need to use the software and how to
 Hussain Wali  
   - [Linkedin](https://www.linkedin.com/in/hussain-wali-780294b6)
   - [Email](hussainwali743@gmail.com)
-Project Link: [Duplicate Transaction Finder](https://github.com/hussainwali74/sample-work/tree/duplicate_transactions_finder)
+  - Project Link: [Duplicate Transaction Finder](https://github.com/hussainwali74/sample-work/tree/duplicate_transactions_finder)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
