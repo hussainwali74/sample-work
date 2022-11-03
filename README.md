@@ -18,7 +18,14 @@ ngrok was listed as a suggestion for locally development but Facebook did not al
 after data seeding is complete you may test the app by chatting with the facebook page:
 > facebook page: `https://www.facebook.com/profile.php?id=100087197868813`  
 
+### EMAIL NOTIFICATION:
 sendgrid is integrated successfully on personal email if required can give a demo with personal email
+
+### typeorm has been implemented for DB communication
+
+### nodemon integrated for script monitoring
+
+check package.json 
 
 create a .env with the following keys and your own values:
 - PORT
@@ -35,3 +42,9 @@ create a .env with the following keys and your own values:
 - SENDGRID_API_KEY
 <hr>
 postman collection with local api testing is available in project root folder: `respondio.postman_collection.json`
+<hr>
+### OpenAPI documentation with SwaggerUI :
+> link: `https://respond-io-chat.herokuapp.com/docs/`
+
+![image](https://user-images.githubusercontent.com/24194686/199648698-3a53b975-508f-48cb-b7fc-b922e048373e.png)
+
