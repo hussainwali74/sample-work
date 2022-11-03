@@ -4,6 +4,6 @@
 ### Python sample work is in  python branch
 ### Machine Learning sample work is in  ml branch
 
-###NodeJs Projects
-- https://github.com/hussainwali74/sample-work/blob/duplicate_transactions_finder/README.md
-- https://github.com/hussainwali74/sample-work/blob/respondio/README.md
+### NodeJs Projects
+- <a href="https://github.com/hussainwali74/sample-work/blob/duplicate_transactions_finder/README.md">Duplicate Transactions Finder</a>
+- <a href="https://github.com/hussainwali74/sample-work/blob/respondio/README.md">Facebook Chatbot with custom DB, sendgrid email, SwaggerUI and JSON file handling</a>
