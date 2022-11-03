@@ -28,7 +28,7 @@
 <div align="center">
   <a href="https://github.com/hussainwali74/sample-work/tree/duplicate_transactions_finder">
     <img src="https://nodejs.org/static/images/logo.svg" alt="Logo" width="80" height="80">
-    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--LkL103Qa--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/377/landscape/typescriptlang.png" alt="Logo" width="80" height="80">
+    <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--LkL103Qa--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/377/landscape/typescriptlang.png" alt="Logo" width="80" height="40">
   </a>
 
 <h3 align="center">Clean and Sort the Transactions </h3>
