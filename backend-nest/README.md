@@ -1,7 +1,6 @@
 
 ## DB setup
-docker run --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=mypassword -d postgress
-
+docker run --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=mypassword -d postgres
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.

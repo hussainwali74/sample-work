@@ -1,4 +1,9 @@
 {
-  "singleQuote": true,
-  "trailingComma": "all"
+    "bracketSpacing": false,
+    "useTabs": false,
+    "bracketSameLine": false,
+    "htmlWhitespaceSensitivity": "css",
+    
+  "singleQuote": false,
+  "trailingComma": "none"
 }
